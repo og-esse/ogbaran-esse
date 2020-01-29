@@ -1,0 +1,17 @@
+    def remove(self):
+        """
+        -------------------------------------------------------
+        Removes and returns the highest priority value from the priority queue.
+        Use: value = pq.remove()
+        -------------------------------------------------------
+        Returns:
+            value - the highest priority value in the priority queue -
+                the value is removed from the priority queue. (?)
+        -------------------------------------------------------
+        """
+        assert len(self._values) > 0, "Cannot remove from an empty priority queue"
+        self._set_first()
+        value = self._values[self._first]
+        self._values.remove(value)
+        self._set_first()
+        return value
